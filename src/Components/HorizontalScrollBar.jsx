@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 import BodyPart from "./BodyPart";
 import images from "../constants/images";
@@ -18,13 +19,13 @@ const HorizontalScrollBar = ({ data, bodyPart, setBodyPart }) => {
 		<div className="relative flex items-center text-white">
 			<img
 				src={images.leftarrow}
-				className=" p-4 opacity-50 cursor-pointer hover:opacity-100"
+				className=" hidden md:block p-4 cursor-pointer text-zinc-400 "
 				onClick={LeftArrow}
 			/>
 
 			<div
 				id="slider"
-				className="xl:w-[950px] lg:w-[800px] md:w-[630px] w-[300px] h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+				className="xl:w-[950px] lg:w-[800px] md:w-[630px] w-[370px] h-full mx-2 overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
 			>
 				{data.map((item) => (
 					<div
@@ -48,7 +49,7 @@ const HorizontalScrollBar = ({ data, bodyPart, setBodyPart }) => {
 			</div>
 			<img
 				src={images.rightarrow}
-				className="p-4 opacity-50 cursor-pointer hover:opacity-100"
+				className="hidden md:block -4 cursor-pointer hover:opacity-100"
 				onClick={RightArrow}
 			/>
 		</div>

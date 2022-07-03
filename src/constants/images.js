@@ -6,6 +6,8 @@ import backimg from "../assets/backimg.png";
 import bar from "../assets/bar.png";
 import leftarrow from "../assets/left-arrow.png";
 import rightarrow from "../assets/right-arrow.png";
+import mobicon from "../assets/mobicon.png";
+mobicon;
 
 export default {
 	Logo,
@@ -16,4 +18,5 @@ export default {
 	bar,
 	leftarrow,
 	rightarrow,
+	mobicon,
 };

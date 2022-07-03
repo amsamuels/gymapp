@@ -13,69 +13,61 @@ export const Navbar = () => {
 	const [burger, setBurger] = useState(false);
 	const handleClick = () => setBurger(!burger);
 	return (
-		<div className="fixed w-full h-[125px] z-10 sm:px-16 px-6 py-4 flex justify-center items-center shadow-none bg-black">
-			<div className="flex items-center w-full md:flex-row flex-col justify-between pt-12">
-				<div className="relative items-center m-4">
+		<div className="fixed w-full h-[100px] z-10 sm:px-16 px-6  py-6 flex justify-center items-center shadow-none bg-black">
+			<div className="flex justify-center items-center 3xl:max-w-[1280px] w-full flex-row justify-between">
+				<div className="relative sm:w-[60px] sm:h-[50px] w-[50px] h-[60px] flex cursor-pointer">
 					<Link to="/" className="">
-						<img
-							src={images.Logo}
-							alt="Logo"
-							className=" w-20 h-18 md:w-full md:h-28"
-						/>
+						<img src={images.Logo} alt="Logo" className="" />
 					</Link>
 				</div>
-				<div className="md:flex hidden justify-center items-center">
-					<Stack
-						direction="row"
-						divider={<Divider orientation="vertical" flexItem />}
-						spacing={2}
-						className="text-xl font-bold font-nav text-gray-500"
+				<div className="flex flex-1 justify-end items-center">
+					<div className="md:flex hidden">
+						<Stack
+							direction="row"
+							divider={<Divider orientation="vertical" flexItem />}
+							spacing={2}
+							className="text-xl font-bold font-hero text-white"
+						>
+							<Link to="/">Home</Link>
+							<Link to="/exercise/:id">Exercise Details</Link>
+						</Stack>
+					</div>
+					<div
+						className="md:hidden  justify-center items-center relative text-zinc-400"
+						onClick={handleClick}
 					>
-						<Link to="/">Home</Link>
-						<Link to="/exercise/:id">ExerciseDetails</Link>
-					</Stack>
+						{!burger ? (
+							<WidgetsOutlinedIcon className="w-10" />
+						) : (
+							<XIcon className="w-10 " />
+						)}
+					</div>
 				</div>
-				<div
-					className="md:hidden  items-center mt-2 mb-4 text-zinc-400"
-					onClick={handleClick}
-				>
-					{!burger ? (
-						<WidgetsOutlinedIcon className="w-10" />
-					) : (
-						<XIcon className="w-10 mt-28" />
-					)}
-				</div>
-				<ul
-					className={
-						!burger ? "hidden" : "rounded-md bg-zinc-900 w-[310px] py-4 px-4"
-					}
-				>
-					<motion.div
-						whileInView={{ y: [100, 0] }}
-						transition={{ duration: 1.5, ease: "easeOut" }}
-						className="flex flex-col justify-center items-center py-4 text-white bg-blend-lighten m-2"
-					>
+			</div>
+			<div className="md:hidden fixed top-[78px] left-0 right-0 bottom-0 z-20 shadow-lg flex flex-col px-6">
+				<div className={!burger ? "hidden" : " flex rounded-md bg-gray-600 "}>
+					<motion.div className="flex flex-col justify-center px-2 py-2 items-left">
 						<Link to="/" className="">
 							<img
-								src={images.Logo}
+								src={images.mobicon}
 								alt="Logo"
-								className="rounded-md m-2 justify-center w-[70px] h-[70px]"
+								className="rounded-md justify-center m-4 w-fit h-[70px]"
 							/>
 						</Link>
 						<Link
 							to="/"
-							className="p-4 rounded-lg hover:bg-gray-400 text-xl  font-hero"
+							className="m-4 text-white rounded-lg hover:bg-gray-400 text-xl  font-hero"
 						>
 							Home
 						</Link>
 						<Link
 							to="/exercise/:id"
-							className="p-4 rounded-lg hover:bg-gray-400 text-xl font-hero"
+							className="m-4 text-white rounded-lg hover:bg-gray-400 text-xl font-hero"
 						>
 							ExerciseDetails
 						</Link>
 					</motion.div>
-				</ul>
+				</div>
 			</div>
 		</div>
 	);

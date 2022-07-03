@@ -44,7 +44,7 @@ const SearchExer = ({ setExercises, bodyPart, setBodyPart }) => {
 					className="xl:w-full xl:h-1/2 lg:w-full lg:h-96 md:w-full md:h-80 w-full h-48 "
 				/>
 			</div>
-			<div className=" flex md:flex-row flex-col justify-center items-center p-6">
+			<div className=" flex flex-row  justify-center items-center p-6">
 				<input
 					className="rounded-lg xl:w-96 lg:w-72 md:w-60 w-48 h-8 md:h-10 p-2 m-2 bg-gray-100"
 					value={search}
