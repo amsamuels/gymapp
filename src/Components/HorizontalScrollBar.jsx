@@ -34,8 +34,8 @@ const HorizontalScrollBar = ({ data, bodyPart, setBodyPart }) => {
 						title={item.id || item}
 						className={
 							bodyPart === item
-								? "border-t-4 border-red-700 justify-center items-center text-center m-6 rounded-lg border-4 w-32  inline-block p-2 cursor-pointer hover:scale-125 ease-in-out duration-300 "
-								: "justify-center items-center text-center m-6 rounded-lg border-4 w-32  inline-block p-2 cursor-pointer hover:scale-125 ease-in-out duration-300"
+								? "border-t-4 border-red-700 justify-center items-center text-center m-6 rounded-lg border-4  w-[150px] h-[160px]   inline-block p-2 cursor-pointer hover:scale-125 ease-in-out duration-300 "
+								: "justify-center items-center text-center m-6 rounded-lg border-4  w-[150px] h-[160px]  inline-block p-2 cursor-pointer hover:scale-125 ease-in-out duration-300"
 						}
 						onClick={() => {
 							setBodyPart(item);
@@ -43,13 +43,13 @@ const HorizontalScrollBar = ({ data, bodyPart, setBodyPart }) => {
 						}}
 					>
 						<p className="capitalize font-nav">{item}</p>
-						<img src={images.bar} />
+						<img src={images.bar} className=" w-[126px] h-[115px]" />
 					</div>
 				))}
 			</div>
 			<img
 				src={images.rightarrow}
-				className="hidden md:block -4 cursor-pointer hover:opacity-100"
+				className="hidden md:block p-4 cursor-pointer hover:opacity-100"
 				onClick={RightArrow}
 			/>
 		</div>

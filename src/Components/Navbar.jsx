@@ -44,30 +44,34 @@ export const Navbar = () => {
 					</div>
 				</div>
 			</div>
-			<div className="md:hidden fixed top-[78px] left-0 right-0 bottom-0 z-20 shadow-lg flex flex-col px-6">
-				<div className={!burger ? "hidden" : " flex rounded-md bg-gray-600 "}>
-					<motion.div className="flex flex-col justify-center px-2 py-2 items-left">
-						<Link to="/" className="">
-							<img
-								src={images.mobicon}
-								alt="Logo"
-								className="rounded-md justify-center m-4 w-fit h-[70px]"
-							/>
-						</Link>
-						<Link
-							to="/"
-							className="m-4 text-white rounded-lg hover:bg-gray-400 text-xl  font-hero"
-						>
-							Home
-						</Link>
-						<Link
-							to="/exercise/:id"
-							className="m-4 text-white rounded-lg hover:bg-gray-400 text-xl font-hero"
-						>
-							ExerciseDetails
-						</Link>
-					</motion.div>
-				</div>
+			<div
+				className={
+					!burger
+						? "hidden"
+						: "bg-gray-600 fixed top-[78px] left-0 right-0 bottom-0 z-20 shadow-lg px-6"
+				}
+			>
+				<motion.div className="flex flex-col jusify-between items-center  ">
+					<Link to="/" className="">
+						<img
+							src={images.mobicon}
+							alt="Logo"
+							className="rounded-md justify-center my-10 w-fit h-[70px]"
+						/>
+					</Link>
+					<Link
+						to="/"
+						className="my-10 px-6 py-2 text-white rounded-lg hover:bg-gray-400 text-xl  font-hero"
+					>
+						Home
+					</Link>
+					<Link
+						to="/exercise/:id"
+						className="my-10  px-6 py-2 text-white rounded-lg hover:bg-gray-400 text-xl font-hero"
+					>
+						ExerciseDetails
+					</Link>
+				</motion.div>
 			</div>
 		</div>
 	);
