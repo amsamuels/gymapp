@@ -52,13 +52,6 @@ export const Navbar = () => {
 				}
 			>
 				<motion.div className="flex flex-col jusify-between items-center  ">
-					<Link to="/" className="">
-						<img
-							src={images.mobicon}
-							alt="Logo"
-							className="rounded-md justify-center my-10 w-fit h-[70px]"
-						/>
-					</Link>
 					<Link
 						to="/"
 						className="my-10 px-6 py-2 text-white rounded-lg hover:bg-gray-400 text-xl  font-hero"

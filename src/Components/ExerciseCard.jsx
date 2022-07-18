@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ExerciseCard = ({ index, exercise }) => {
+const ExerciseCard = ({ exercise }) => {
 	return (
 		<>
-			<Link to={`/exercise/${exercise.id}`} className="">
+			<Link to={`/exercise/${exercise.id}`}>
 				<div className="flex flex-col bg-white rounded-lg jusify-center items-center shadow-md md:w-52 w-fit h-[285px] p-2 md:m-6 my-4 m-0 overflow-hidden">
 					<img
 						src={exercise.gifUrl}

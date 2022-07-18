@@ -7,20 +7,6 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
 	const [currentPage, setcurrentPage] = useState(1);
 	const exercisesPerPage = 8;
 
-	const indexOfLastExercise = currentPage * exercisesPerPage;
-
-	const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-
-	const currentExercise = exercises.slice(
-		indexOfFirstExercise,
-		indexOfLastExercise
-	);
-	const paginate = (e, value) => {
-		setcurrentPage(value);
-
-		window.scrollTo({ top: 1900, behavior: "smooth" });
-	};
-
 	useEffect(() => {
 		const fetchExercisesData = async () => {
 			let exercisesData = [];
@@ -40,6 +26,19 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
 		};
 		fetchExercisesData();
 	}, [bodyPart]);
+
+	const indexOfLastExercise = currentPage * exercisesPerPage;
+	const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
+	const currentExercise = exercises.slice(
+		indexOfFirstExercise,
+		indexOfLastExercise
+	);
+
+	const paginate = (e, value) => {
+		setcurrentPage(value);
+
+		window.scrollTo({ top: 1600, behavior: "smooth" });
+	};
 
 	return (
 		<>
@@ -63,7 +62,7 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
 						page={currentPage}
 						count={Math.ceil(exercises.length / exercisesPerPage)}
 						onChange={paginate}
-						className="bg-white md:flex items-center justify-center md:w-[400px] h-[55px]  w-[300px] p-2 rounded-md"
+						className="bg-white md:flex items-center justify-center md:w-[460px] h-[55px]  w-[300px] p-2 rounded-md"
 					/>
 				)}
 			</div>
