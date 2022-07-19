@@ -53,11 +53,11 @@ export const ExerciseDetails = () => {
           searchedVideos={searchedVideos}
           name={exerciseDetail.name}
         />
+        <SimilarExercises
+          similarExercises={similarExercises}
+          similarEquipment={similarEquipment}
+        />
       </div>
-      <SimilarExercises
-        similarExercises={similarExercises}
-        similarEquipment={similarEquipment}
-      />
     </>
   );
 };

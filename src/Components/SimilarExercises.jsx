@@ -4,17 +4,23 @@ import HorizontalScrollBar from "./HorizontalScrollBar";
 import Loader from "./Loader";
 
 const SimilarExercises = ({ similarExercises, similarEquipment }) => {
-  console.log(similarExercises);
   return (
-    <div>
-      <div>
+    <>
+      <div className="">
         {similarExercises.length ? (
           <HorizontalScrollBar data={similarExercises} />
         ) : (
           <Loader />
         )}
       </div>
-    </div>
+      <div className="m-2">
+        {similarEquipment.length ? (
+          <HorizontalScrollBar data={similarEquipment} />
+        ) : (
+          <Loader />
+        )}
+      </div>
+    </>
   );
 };
 

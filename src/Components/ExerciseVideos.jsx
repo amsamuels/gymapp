@@ -20,7 +20,7 @@ const ExerciseVideos = ({ searchedVideos, name }) => {
                 <img
                   src={item.video.thumbnails[0].url}
                   alt={item.video.title}
-                  className="w-100% h-100% object-cover rounded-t-lg"
+                  className="w-full object-contain rounded-t-lg"
                 />
               </div>
               <div className="p-2 items-center justify-center ">
