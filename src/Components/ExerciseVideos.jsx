@@ -1,11 +1,11 @@
 import React from "react";
-
+import Loader from "./Loader"
 const ExerciseVideos = ({ searchedVideos, name }) => {
-  if (!searchedVideos.length) return "loading..";
+  if (!searchedVideos.length) return <Loader/>;
   console.log(searchedVideos);
   return (
     <>
-      <div className="text-white">{name}</div>
+      <div className="capitalize items-center text-4xl m-2 text-white">{name}</div>
       <div className="flex md:grid md:grid-cols-3  xl:grid xl:grid-cols-6 flex-col">
         {searchedVideos?.slice(0, 6).map((item, index) => (
           <a
