@@ -26,7 +26,7 @@ const HorizontalScrollBar = ({ data, bodyPart, setBodyPart, isBodyParts }) => {
 
       <div
         id="slider"
-        className="xl:w-[950px] lg:w-[800px] md:w-[630px] w-[370px] h-full mx-2 overflow-x-scroll scroll  flex  flex-row whitespace-nowrap scroll-smooth scrollbar-hide"
+        className="xl:w-[950px] lg:w-[800px] md:w-[630px] w-[370px] h-full mx-2 overflow-x-scroll scroll  space-x-10 flex  flex-row whitespace-nowrap scroll-smooth scrollbar-hide"
       >
         {data.map((item) => (
           <div

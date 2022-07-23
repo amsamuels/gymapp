@@ -14,7 +14,7 @@ export const Navbar = () => {
 	const handleClick = () => setBurger(!burger);
 	return (
 		<div className="fixed w-full h-[100px] z-10 sm:px-16 px-6  py-6 flex justify-center items-center shadow-none bg-black">
-			<div className="flex justify-center items-center 3xl:max-w-[1280px] w-full flex-row justify-between">
+			<div className="flex justify-center items-center 3xl:max-w-[1280px] w-full flex-row ">
 				<div className="relative sm:w-[60px] sm:h-[50px] w-[50px] h-[60px] flex cursor-pointer">
 					<Link to="/" className="">
 						<img src={images.Logo} alt="Logo" className="" />
